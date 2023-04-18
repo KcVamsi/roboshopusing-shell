@@ -15,12 +15,12 @@ echo -e "\e[31munzipping the application\e[0m"
 unzip /tmp/catalogue.zip 
 npm install 
 echo -e "\e[31mCopying the files\e[0m"
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/roboshopusing-shell/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[31mstarting the application\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue 
 systemctl start catalogue
 echo -e "\e[31mCopying the mongod\e[0m"
-cp mongodb.repo /etc/systemd/system/catalogue.service
+cp /home/centos/roboshopusing-shell/mongodb.repo /etc/systemd/system/catalogue.service
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsdomain1.online </app/schema/catalogue.js
