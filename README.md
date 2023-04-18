@@ -6,4 +6,5 @@
 
 2. in scripting we cannt edit the files so we see how to do it in future.
 
-3.
+3. to clear that we need sed editor.
+
