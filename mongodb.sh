@@ -7,4 +7,3 @@ systemctl enable mongod
 systemctl restart mongod 
 
 ## here we nend to change the ip from 127.0.0.0 to 0.0.0.0
-but the editing of file cant be done here.
