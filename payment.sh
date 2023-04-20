@@ -1,4 +1,5 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install python36 gcc python3-devel -y
 echo -e "\e[31museradd\e[0m"

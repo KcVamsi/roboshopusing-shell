@@ -1,4 +1,5 @@
-source commom.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install golang -y
 echo -e "\e[31minstalling package\e[0m"
