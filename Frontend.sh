@@ -1,5 +1,5 @@
 script=$(realpath "$0")
-script_path=$(dirname "script")
+script_path=$(dirname "$script")
 source ${script_path}/common.sh
 yum install nginx -y 
 cp frontend.confg /etc/nginx/default.d/roboshop.conf 
