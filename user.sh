@@ -22,6 +22,6 @@ systemctl daemon-reload
 systemctl enable user 
 systemctl start user
 echo -e "\e[31mcopying the home location\e[0m"
-cp $script_path/mongodb.repo /etc/systemd/system/user.service
+cp /home/centos/roboshopusing-shell/mongodb.repo /etc/systemd/system/user.service
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsdomain1.online </app/schema/user.js
