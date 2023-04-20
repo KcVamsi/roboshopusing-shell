@@ -1,9 +1,10 @@
+app_user=roboshop
 echo -e "\e[31mConfigure the application\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[31minstalling the application\e[0m"
 yum install nodejs -y
 echo -e "\e[31madding the user\e[0m"
-useradd roboshop
+useradd $(app_user)
 echo -e "\e[31mCreating the directory\e[0m"
 rm -rf /app
 mkdir /app 

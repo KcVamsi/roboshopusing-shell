@@ -1,7 +1,8 @@
+app_user=roboshop
 echo -e "\e[31minstalling package\e[0m"
 yum install python36 gcc python3-devel -y
 echo -e "\e[31museradd\e[0m"
-useradd roboshop
+useradd $(app_user)
 echo -e "\e[31mdirectry\e[0m"
 rm -rf /app
 mkdir /app 

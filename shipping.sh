@@ -1,7 +1,8 @@
+app_user=roboshop
 echo -e "\e[31minstall maven\e[0m"
 yum install maven -y
 echo -e "\e[31muser add\e[0m"
-useradd roboshop
+useradd $(app_user)
 echo -e "\e[31mmake app dir\e[0m"
 rm -rf /app
 mkdir /app 

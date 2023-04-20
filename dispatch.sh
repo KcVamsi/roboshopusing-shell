@@ -1,7 +1,8 @@
+app_user=roboshop
 echo -e "\e[31minstalling package\e[0m"
 yum install golang -y
 echo -e "\e[31minstalling package\e[0m"
-useradd roboshop
+useradd $(app_user)
 echo -e "\e[31minstalling package\e[0m"
 rm -rf /app
 mkdir /app 

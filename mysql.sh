@@ -1,3 +1,4 @@
+app_user=roboshop
 echo -e "\e[31mdisbale\e[0m"
 dnf module disable mysql -y 
 echo -e "\e[31mcopy file\e[0m"
