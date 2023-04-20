@@ -16,12 +16,12 @@ echo -e "\e[31munzipping the file\e[0m"
 unzip /tmp/user.zip
 npm install 
 echo -e "\e[31mcopying the home location\e[0m"
-cp $script_path/user.service /etc/systemd/system/user.service
+cp ${script_path}/user.service /etc/systemd/system/user.service
 echo -e "\e[31mstarting the user service\e[0m"
 systemctl daemon-reload
 systemctl enable user 
 systemctl start user
 echo -e "\e[31mcopying the home location\e[0m"
-cp $script_path/mongodb.repo /etc/yum.repos.d/mongo.repo
+cp ${script_path}/mongodb.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsdomain1.online </app/schema/user.js
