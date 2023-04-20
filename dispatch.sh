@@ -15,7 +15,6 @@ unzip /tmp/dispatch.zip
 go mod init dispatch
 go get 
 go build
-vim /etc/systemd/system/dispatch.service
 echo -e "\e[31minstalling package\e[0m"
 systemctl daemon-reload
 systemctl enable dispatch 
