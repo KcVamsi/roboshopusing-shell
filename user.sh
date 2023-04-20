@@ -1,6 +1,5 @@
-source common.sh
-dirname $0
-exit
+script_path=$(dirname $0)
+source $(script_path)/common.sh
 echo -e "\e[31mconfiguring the nodejs\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[31minstalling the nodejs\e[0m"
@@ -17,12 +16,12 @@ echo -e "\e[31munzipping the file\e[0m"
 unzip /tmp/user.zip
 npm install 
 echo -e "\e[31mcopying the home location\e[0m"
-cp /home/centos/roboshopusing-shell/user.service /etc/systemd/system/user.service
+cp script_path/user.service /etc/systemd/system/user.service
 echo -e "\e[31mstarting the user service\e[0m"
 systemctl daemon-reload
 systemctl enable user 
 systemctl start user
 echo -e "\e[31mcopying the home location\e[0m"
-cp /home/centos/roboshopusing-shell/mongodb.repo /etc/systemd/system/user.service
+cp script_path/mongodb.repo /etc/systemd/system/user.service
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsdomain1.online </app/schema/user.js
