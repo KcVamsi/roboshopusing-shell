@@ -2,7 +2,7 @@ source commom.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install golang -y
 echo -e "\e[31minstalling package\e[0m"
-useradd $(app_user)
+useradd ${app_user}
 echo -e "\e[31minstalling package\e[0m"
 rm -rf /app
 mkdir /app 

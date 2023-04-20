@@ -4,7 +4,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[31minstalling the nodejs\e[0m"
 yum install nodejs -y
 echo -e "\e[31muser add\e[0m"
-useradd $(app_user
+useradd ${app_user}
 echo -e "\e[31mcreate directory\e[0m"
 rm -rf /app
 mkdir /app 
