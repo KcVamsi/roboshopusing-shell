@@ -1,4 +1,4 @@
-app_user=roboshop
+source common.sh
 echo -e "\e[31mconfiguration\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[31minstalling the nodejs\e[0m"

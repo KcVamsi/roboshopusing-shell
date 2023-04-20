@@ -1,4 +1,4 @@
-app_user=roboshop
+source common.sh
 yum install nginx -y 
 cp frontend.confg /etc/nginx/default.d/roboshop.conf 
 rm -rf /usr/share/nginx/html/* 

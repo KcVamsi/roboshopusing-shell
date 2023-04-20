@@ -1,4 +1,4 @@
-app_user=roboshop
+source commom.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install golang -y
 echo -e "\e[31minstalling package\e[0m"

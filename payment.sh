@@ -1,4 +1,4 @@
-app_user=roboshop
+source common.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install python36 gcc python3-devel -y
 echo -e "\e[31museradd\e[0m"

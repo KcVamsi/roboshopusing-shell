@@ -1,3 +1,4 @@
+source common.sh
 echo -e "\e[31minstalling package\e[0m"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 echo -e "\e[31minstalling\e[0m"
