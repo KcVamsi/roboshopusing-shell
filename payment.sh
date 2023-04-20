@@ -16,7 +16,7 @@ unzip /tmp/payment.zip
 echo -e "\e[31install\e[0m"
 pip3.6 install -r requirements.txt
 echo -e "\e[31mcopying\e[0m"
-sed -i -e "s|rabbitmq_app_password|$(rabbitmq_app_password)|" ${script_path}/payment.service
+sed -i -e "s|rabbitmq_app_password|${rabbitmq_app_password}|" ${script_path}/payment.service
 cp ${script_path}/payment.service /etc/systemd/system/payment.service
 echo -e "\e[31mstarting\e[0m"
 systemctl daemon-reload
