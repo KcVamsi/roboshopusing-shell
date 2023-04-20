@@ -15,7 +15,7 @@ unzip /tmp/payment.zip
 echo -e "\e[31install\e[0m"
 pip3.6 install -r requirements.txt
 echo -e "\e[31mcopying\e[0m"
-cp $script_path/payment.service /etc/systemd/system/payment.service
+cp ${script_path}/payment.service /etc/systemd/system/payment.service
 echo -e "\e[31mstarting\e[0m"
 systemctl daemon-reload
 systemctl enable payment 

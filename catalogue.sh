@@ -17,12 +17,12 @@ echo -e "\e[31munzipping the application\e[0m"
 unzip /tmp/catalogue.zip 
 npm install 
 echo -e "\e[31mCopying the files\e[0m"
-cp $script_path/catalogue.service /etc/systemd/system/catalogue.service
+cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[31mstarting the application\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue 
 systemctl start catalogue
 echo -e "\e[31mCopying the mongod\e[0m"
-cp $script_pathum.repos.d/mongo.repo
+cp ${script_path}um.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsdomain1.online </app/schema/catalogue.js
