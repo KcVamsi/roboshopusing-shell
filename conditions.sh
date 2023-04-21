@@ -40,6 +40,14 @@ fi
 fruit_name=$1
 quantity=$2
 
+# - z is used to check whether the variable is empty or not which means we are giving only the variable not the inputs then it will show error.
+# then we stop the script at that point by exit
+if [ -z "$fruit_name" ];
+then
+echo input missing
+exit
+fi
+
 if [ "$fruit_name" == "mango" ];
 
 then
@@ -64,12 +72,7 @@ echo mango price - 1$
 fi
 
 # - z is used to check whether the variable is empty or not which means we are giving only the variable not the inputs then it will show error.
-# then we stop the script at that point by exit
-if [ -z "$fruit_name" ];
-then
-echo input missing
-exit
-fi
+# then we stop the script at that point by exit if [ -z "$fruit_name" ]; then echo nput missing exit fi
 
 
 
