@@ -1,11 +1,12 @@
 # if, if else, else if.
-
+#for string compariosns
 # if example 
 
 fruit_name=mango
 quantity=10
 
 # keep the syntax in mind because of the spaces and the "" we are getting error. and also fi in the last
+#always double quote "" the variables
 
 if [ "$fruit_name" == "mango" ];
 
@@ -48,5 +49,16 @@ echo mango quantity - $quantity
 else
 
 echo fruit not exist
+
+fi
+
+
+#for the number comparisons.
+
+if [ "$quantity" -gt 100 ];
+then
+echo mango price - $5
+else
+echo mango price - $1
 
 fi
