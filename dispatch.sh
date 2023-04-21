@@ -1,5 +1,6 @@
 script=$(realpath "$0")
 script_path=$(dirname $script)
+rabbitmq_app_password=$1
 source ${script_path}/common.sh
 echo -e "\e[31minstalling package\e[0m"
 yum install golang -y
@@ -13,6 +14,7 @@ curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatc
 cd /app 
 echo -e "\e[31minstalling package\e[0m"
 unzip /tmp/dispatch.zip
+sed -i -e "s|rabbitmq_app_password|${rabbitmq_app_password}|" ${script_path}/payment.service
 go mod init dispatch
 go get 
 go build
