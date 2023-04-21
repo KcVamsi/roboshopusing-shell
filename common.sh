@@ -7,7 +7,7 @@ print_head(){
 function_nodejs() {
 print_head "Configure the application"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
-print_head "installing the application
+print_head "installing the application"
 yum install nodejs -y
 print_head "adding the user"
 useradd ${app_user}
