@@ -2,6 +2,11 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
 rabbimq_app_password=$1
+if [ -z "$rabbitmq_root_password" ];
+then
+echo input missing
+exit
+fi
 echo -e "\e[31minstalling package\e[0m"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 echo -e "\e[31minstalling\e[0m"
