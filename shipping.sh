@@ -25,4 +25,4 @@ mysql -h mysql.devopsdomain1.online -uroot -p${mysql_root_password} < /app/schem
 echo -e "\e[31mstarting the service\e[0m"
 systemctl daemon-reload
 systemctl enable shipping
-systemctl start shipping
+systemctl restart shipping
