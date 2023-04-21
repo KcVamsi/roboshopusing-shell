@@ -4,8 +4,7 @@ print_head(){
     echo -e "\e[31m$1\e[0m"
 }
 
-function_nodejs(){
-
+function_nodejs() {
 print_head "Configure the application"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 print_head "installing the application
@@ -28,5 +27,4 @@ print_head "starting the application"
 systemctl daemon-reload
 systemctl enable ${component} 
 systemctl restart ${component}
-
 }
