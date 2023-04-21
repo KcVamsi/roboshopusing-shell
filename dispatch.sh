@@ -14,7 +14,7 @@ curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatc
 cd /app 
 echo -e "\e[31minstalling package\e[0m"
 unzip /tmp/dispatch.zip
-sed -i -e "s|rabbitmq_app_password|${rabbitmq_app_password}|" ${script_path}/payment.service
+sed -i -e "s|rabbitmq_app_password|${rabbitmq_app_password}|" ${script_path}/dispatch.service
 go mod init dispatch
 go get 
 go build
