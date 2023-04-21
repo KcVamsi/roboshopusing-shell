@@ -7,4 +7,4 @@ if [ "$fruit_name" == "mango"];
 then
 echo mango quantity - $quantity
 
-
+fi
