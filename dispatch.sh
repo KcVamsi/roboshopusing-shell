@@ -24,7 +24,7 @@ cp ${script_path}/dispatch.service /etc/systemd/system/dispatch.service
 go mod init dispatch
 go get 
 go build
-echo -e "\e[31minstalling package\e[0m"
+echo -e "\e[31mrestarting\e[0m"
 systemctl daemon-reload
 systemctl enable dispatch 
-systemctl start dispatch
+systemctl restart dispatch
