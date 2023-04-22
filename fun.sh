@@ -9,3 +9,4 @@
  # we have declared the function now we need to call it, forthat just give name
 
  function_name
+ echo exit status of function - $?
