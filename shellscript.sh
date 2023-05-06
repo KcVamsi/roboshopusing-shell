@@ -79,6 +79,28 @@ a=20
 # all argument - $*
 # number of argument - $#
 
+#     conditions
+# a. if conditions - 1. if 2. if else 3. else if
+# if uses expressions
+# a. string expressions  b. number expressions  3. file expressions
 
 
- 
+#      function
+# if we decalre a name to the set of cmnds it called as function.
+#functions has its own exit status and ranges from 0-255
+
+
+ function_name(){
+
+  echo hello
+  return 1
+  # 1 is the xit status and ranges from 0 -255
+
+ }
+
+ # we have declared the function now we need to call it, forthat just give name
+
+ function_name
+
+#                Quotes
+# 
